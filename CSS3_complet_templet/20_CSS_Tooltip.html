@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Tooltip</title>
+    <style>
+        .tooltip_btn{
+            background-color: purple;
+            color: whitesmoke;
+            border: none;
+            font-size: 25px;
+            padding: 15px 50px;
+            border-radius: 7px;
+
+        }
+        .tooltip_text{
+            background-color: black;
+            color: whitesmoke;
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            border-radius: 7px;
+            display: none;
+
+        }
+        .tooltip:hover .tooltip_text{
+
+            display: block; /*display*/
+        }
+        .tooltip{
+            width: 200px;
+        }
+
+        .tooltip .tooltip_text:after {
+            content: " ";
+            position: absolute;
+            bottom: 100%;  /* At the top of the tooltip */
+            left: 70%;
+            margin-left: -10px;
+            border: 7px solid;
+            border-color: transparent transparent black transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tooltip">
+        <button class="tooltip_btn">Hover Me</button>
+        <p class="tooltip_text">You hover on Me ?</p>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 3 Transitions</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: darkred;
+
+        }
+        .transition_width{
+          transition:width 2s;
+        }
+        .transition_width:hover{
+            width: 300px;
+        }
+        .transition_height{
+            transition:height 2s;
+        }
+        .transition_height:hover{
+            height: 300px;
+        }
+        .transition_height_width{
+            transition: width 2s ,height 2s;
+        }
+        .transition_height_width:hover{
+            width: 200px;
+            height: 200px;
+        }
+        .transition_transform{
+            transition: width 2s , transform 2s;
+            transition-delay: 2s;
+            transition-timing-function: linear;
+        }
+        .transition_transform{
+            transition: width 2s,transform 2s;
+            transition-timing-function:linear;
+        }
+        .transition_transform:hover{
+            width: 200px;
+            transform: rotate(180deg);
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="transition_width">
+        <h2>Width</h2>
+    </div>
+
+    <div class="transition_height">
+        <h2>Height</h2>
+    </div>
+
+    <div class="transition_height_width">
+        <h2>Both</h2>
+    </div>
+
+    <div class="transition_transform">
+        <h2>Rotate</h2>
+    </div>
+
+    <!-- transition-timing-function same start and end timings-->
+    <div class="speed_curve_linear">
+       <h2>ease-in-out</h2>
+    </div>
+
+    <!-- Slow start time fast end time -->
+    <div class="speed_curve_ease_in">
+       <h2>ease_in</h2>
+    </div>
+
+    <!-- fast start time slow end time -->
+    <div class="speed_curve_ease_out">
+       <h2>ease_out</h2>
+    </div>
+
+    <!-- delay Transition -->
+    <div>
+
+        <h2>delay the transition</h2>
+    </div>
+
+</body>
+</html>
